@@ -1,0 +1,321 @@
+Compte rendu TP1 JAVA
+
+------------------
+MAROUBY Alexandra
+DURIEZ Antoine
+------------------
+
+Exo 2 
+1)
+3 classes : SubEnCode, Cesar et Polybe
+SubEnCode : classe principale : teste la véracité des arguments est choisi la méthode de
+chiffrage à utiliser (appelle Cesar ou Polybe)
+Cesar : gère la méthode de chiffrage de césar, est appelée dans SubEnCode
+Polybe : pareil que Cesar mais pour la méthode de Polybe : génère le carré de Polybe et
+gère le chiffrage du Polybe, est appelée par SubEnCode.
+Il n'y a aucune méthodes statiques : toutes les méthodes sont associées aux objets.
++ Voir Diagramme des classes SubEnCode
+
+************************************************************************************
+
+2) La méthode de césar peut être facilement utilisée pour le déchiffrement, il suffit
+de changer certains tests d'égalités et d'inégalités.
+Le code devient alors :
+public String methodeCesar(String texte, int decalage) throws FileNotFoundException, IOException{ 
+....
+if(valeur >= 'a' && valeur <= 'z'){ 
+                    while(incrementCryptage > decalage){	//cas chiffrement : incrementCryptage < decalage
+                        if(valeur == 'a'){ 	//cas chiffrement : valeur == 'z'
+                            valeur = 'z';   	//cas chiffrement : valeur == 'a'
+                        }else{
+                            valeur--;   // cas chiffrement : valeur++
+                        }
+                        incrementCryptage--;   //cas chiffrement : incrementCryptage++
+
+Ce choix de conception est justifié par le fait que les modifications à apporter au code existant sont très peu nombreuses.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Exo 3
+1) et 2) Pour compter le nombre de mots d'un texte, le type primitif entier adéquat est fortement dépendant de la longueur du texte.
+Le même problème se pose pour le compte des occurences de lettres.
+En effet, plus le texte est long ( et donc contient un nombre de lettres et de mots important), plus il sera judicieux de choisir un
+long int pour le comptage.
+A contrario, plus le texte sera court, plus il sera judicieux de choisir un int, ou même un short int.
+
+Nous n'observons pas d'abérrations dans le texte 11-0.txt (Alice au pays des merveilles) quand nous utilisons un int, un short int ou un long int.
+Sur un texte plus long (Sherlock Holmes), nous observons des erreurs lors de l'utilisation d'une variable de comptage des lettres et des mots de type short.
+Afin de pousser plus loin le problème, nous décatuplons le texte de Sherlock Holmes, et avons testé le programme pour des variables de type int et long int.
+Nous ne relevons aucunes anomalies dans les 2 analyses.
+Nous pouvons donc assurer que l'utilisation de int nous suffira à rendre une analyse pertinente des lettres et mots présents dans le texte.
+Cependant, si le texte est d'une longueur infiniment plus grande que 16-10.txt (les 10 Sherlock), il faudra penser à utiliser des types long int.
+
+//Conclusion de la phase de test : 
+Sherlock Holmes * 10 : 16-10.txt : pas de différence entres les utilisations de int et long
+Sherlock Holmes : 16-0.txt : apparition d'abérrations lors de l'utilisation des short
+			     pas de différence entres les utilisations int et long
+Alice aux pays des merveilles : 11-0.txt : pas de différence entres les utilisations de short, int et long
+
+//Détails des tests
+
+Sherlock Holmes * 10 : int et long
+**CAS INT
+Nombre total de mots : 1962378
+Occurence des lettres : 
+a : 650646
+b : 119628
+c : 200142
+d : 343170
+e : 989514
+f : 168534
+g : 149616
+h : 532602
+i : 562338
+j : 9810
+k : 66330
+l : 317412
+m : 218718
+n : 534636
+o : 627606
+p : 130320
+q : 7884
+r : 462762
+s : 502956
+t : 729828
+u : 244890
+v : 82224
+w : 207990
+x : 10422
+y : 175986
+z : 2754
+
+** CAS LONG
+Nombre total de mots : 1962378
+Occurence des lettres : 
+a : 650646
+b : 119628
+c : 200142
+d : 343170
+e : 989514
+f : 168534
+g : 149616
+h : 532602
+i : 562338
+j : 9810
+k : 66330
+l : 317412
+m : 218718
+n : 534636
+o : 627606
+p : 130320
+q : 7884
+r : 462762
+s : 502956
+t : 729828
+u : 244890
+v : 82224
+w : 207990
+x : 10422
+y : 175986
+z : 2754
+---------------------------------------------
+Sherlock Holmes : short, int et long
+**CAS SHORT
+Nombre total de mots : -22051	//aberration
+Occurence des lettres : 
+a : -29389	//aberration
+b : 6646
+c : 11119
+d : 19065
+e : -10563
+f : 9363
+g : 8312
+h : 29589
+i : 31241
+j : 545
+k : 3685
+l : 17634
+m : 12151
+n : 29702
+o : -30669	//aberration
+p : 7240
+q : 438
+r : 25709
+s : 27942
+t : -24990	//aberration
+u : 13605
+v : 4568
+w : 11555
+x : 579
+y : 9777
+z : 153
+
+**CAS INT
+Nombre total de mots : 109021
+Occurence des lettres : 
+a : 36147
+b : 6646
+c : 11119
+d : 19065
+e : 54973
+f : 9363
+g : 8312
+h : 29589
+i : 31241
+j : 545
+k : 3685
+l : 17634
+m : 12151
+n : 29702
+o : 34867
+p : 7240
+q : 438
+r : 25709
+s : 27942
+t : 40546
+u : 13605
+v : 4568
+w : 11555
+x : 579
+y : 9777
+z : 153
+
+**CAS LONG
+Nombre total de mots : 109021
+Occurence des lettres : 
+a : 36147
+b : 6646
+c : 11119
+d : 19065
+e : 54973
+f : 9363
+g : 8312
+h : 29589
+i : 31241
+j : 545
+k : 3685
+l : 17634
+m : 12151
+n : 29702
+o : 34867
+p : 7240
+q : 438
+r : 25709
+s : 27942
+t : 40546
+u : 13605
+v : 4568
+w : 11555
+x : 579
+y : 9777
+z : 153
+--------------------------------------
+Alice aux pays des merveilles : short, int, long
+**CAS LONG 
+Nombre total de mots : 30423
+Occurence des lettres : 
+a : 9804
+b : 1746
+c : 3003
+d : 5469
+e : 15396
+f : 2383
+g : 2944
+h : 7890
+i : 8634
+j : 235
+k : 1290
+l : 5211
+m : 2466
+n : 8053
+o : 9480
+p : 1968
+q : 220
+r : 6612
+s : 7269
+t : 12204
+u : 3979
+v : 963
+w : 2952
+x : 176
+y : 2584
+z : 80
+
+**CAS INT
+Nombre total de mots : 30423
+Occurence des lettres : 
+a : 9804
+b : 1746
+c : 3003
+d : 5469
+e : 15396
+f : 2383
+g : 2944
+h : 7890
+i : 8634
+j : 235
+k : 1290
+l : 5211
+m : 2466
+n : 8053
+o : 9480
+p : 1968
+q : 220
+r : 6612
+s : 7269
+t : 12204
+u : 3979
+v : 963
+w : 2952
+x : 176
+y : 2584
+z : 80
+
+**CAS SHORT
+Nombre total de mots : 30423
+Occurence des lettres : 
+a : 9804
+b : 1746
+c : 3003
+d : 5469
+e : 15396
+f : 2383
+g : 2944
+h : 7890
+i : 8634
+j : 235
+k : 1290
+l : 5211
+m : 2466
+n : 8053
+o : 9480
+p : 1968
+q : 220
+r : 6612
+s : 7269
+t : 12204
+u : 3979
+v : 963
+w : 2952
+x : 176
+y : 2584
+z : 80
+
+**************************************************************************************
+
+3) Pour réaliser le compte des 20 mots les plus utilisés, nous avons utilisé une structure HashMap, dans laquelle les clés étaient les mots, et les
+valeurs les occurences de ces mots.
+Nous avons ensuite effectué plusieurs opérations sur la Map afin de trier les clés et les valeurs en fonctions des mots les plus récurrents.
+Il s'agit ici d'expliciter la méthode trieurDeDico() : 
+
+	1- En parallèle de la HashMap, nous complétons également une ArrayList avec les mots rencontrés. Cette ArrayList sera sans doublons.
+Nous utilisons une List plutôt qu'un Set car la méthode .get(), que nous utiliserons plus tard, n'existe pas chez les Set.
+
+	2- Une fois les deux structures complêtées, nous parcourrons l'ArrayList (qui est en fait une liste des clés de la HashMap) afin de tirer une clé et
+de comparer la valeur de cette clés avec la valeur des autres clés de la HashMap.
+	
+	3- Quand nous trouvons la clé qui possède l'occurence la plus haute, nous stockons la clé et la valeur respectivement dans 2 tableaux (Nous obtiendrons ainsi
+un tri des mots ainsi que leurs occurences, pour vérifier qu'il s'agira bien des 20 mots les plus lus).
+
+	4- La clé précédemment stockée est retirée de l'ArrayList et nous recommençons à l'étape 1 jusqu'à ce que l'ArrayList soit vide (vérifié avec isEmpty()).
+Nous allons donc parcourir l'ArrayList et la HashMap autant qu'il y a de mots dans le texte (sans compter les doublons).
+Il s'agit donc d'un tri par sélection. Son niveau de complexité est assez élevé mais tout de même fonctionnel pour des textes comme Alice au pays des merveilles, ou encore Sherlock Holmes.
+

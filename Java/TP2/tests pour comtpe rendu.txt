@@ -1,0 +1,88 @@
+
+// Exo 1 / 6) tests de fonctionnement de printFrom
+Procédure : 
+1) Création de 2 rendezvous : le même jour, à quelques minutes d'intervalles
+
+# Please enter command [p(rint),a(dd),m(odify),c(lear),s(ave),q(uit)]
+> a
+# Add a rendezvous
+# Enter date (YYYY-MM-DD)
+> 2000-01-01
+# Enter start time (HH:MM)
+> 10:10
+# Enter span (minutes):
+> 30
+# Enter description (one line):
+> test 1 : 10:10
+# Rendezvous '2000-01-01 10:10 (30min): test 1 : 10:10' successfully added.
+# Please enter command [p(rint),a(dd),m(odify),c(lear),s(ave),q(uit)]
+> a
+# Add a rendezvous
+# Enter date (YYYY-MM-DD)
+> 2000-01-01
+# Enter start time (HH:MM)
+> 09:50
+# Enter span (minutes):
+> 30
+# Enter description (one line):
+> test 2 9:50
+# Rendezvous '2000-01-01 09:50 (30min): test 2 9:50' successfully added.
+
+2) print des rendezvous à 3 heures différentes (même jour) :
+	-1 période avant les 2 rendezvous
+	-1 période entre les 2
+	-1 période après les 2
+
+# Please enter command [p(rint),a(dd),m(odify),c(lear),s(ave),q(uit)]
+> p
+# Print the list of rendezvous
+# Enter date (YYYY-MM-DD)
+> 2000-01-01
+# Enter start time (HH:MM)
+> 09:00						
+# List of rendezvous for 2000-01-01 after 09:00:	//les 2 rendezvous apparaissent
+2000-01-01 10:10 (30min): test 1 : 10:10
+2000-01-01 09:50 (30min): test 2 9:50
+# Please enter command [p(rint),a(dd),m(odify),c(lear),s(ave),q(uit)]
+> p
+# Print the list of rendezvous
+# Enter date (YYYY-MM-DD)
+> 2000-01-01
+# Enter start time (HH:MM)
+> 10:00
+# List of rendezvous for 2000-01-01 after 10:00:
+2000-01-01 10:10 (30min): test 1 : 10:10		//un seul rendezvous est listé
+# Please enter command [p(rint),a(dd),m(odify),c(lear),s(ave),q(uit)]
+> p
+# Print the list of rendezvous
+# Enter date (YYYY-MM-DD)
+> 2000-01-01
+# Enter start time (HH:MM)
+> 10:20
+# List of rendezvous for 2000-01-01 after 10:20:
+No rendez-vous after 2000-01-01T10:20			//aucuns rendezvous n'apparait
+
+*****************************************************************************************
+6) test de fonctionnement de printFrom, paramètre null
+
+# Please enter command [p(rint),a(dd),m(odify),c(lear),s(ave),q(uit)]
+> a
+# Add a rendezvous
+# Enter date (YYYY-MM-DD)
+> 2000-01-01
+# Enter start time (HH:MM)
+> 10:00
+# Enter span (minutes):
+> 30
+# Enter description (one line):
+> test
+# Rendezvous '2000-01-01 10:00 (30min): test' successfully added.
+# Please enter command [p(rint),a(dd),m(odify),c(lear),s(ave),q(uit)]
+> p
+# Print the list of rendezvous
+# Enter date (YYYY-MM-DD)
+> 2000-01-01
+# Enter start time (HH:MM)
+> 9:00
+# List of rendezvous for 2000-01-01 after 09:00:
+Exception in thread "main" java.lang.NullPointerException	// le programme n'est pas protégé

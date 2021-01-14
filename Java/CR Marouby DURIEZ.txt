@@ -1,0 +1,43 @@
+Compte rendu TP JAVA
+Marouby Alexandra 21703806
+Duriez Antoine 21808929
+
+**********************************************
+Exercice 2, TP10
+
+questions 1) et 2)
+Voir code
+
+question 3)
+On décide de calculer le temps d'éxecution mis par le programme pour remplir la ConcurrentHashMap de tous les mots du texte.
+On utilise le texte "Alice au pays des merveilles" (11-0.txt)
+On mesure pour 1, 10, 100 et 1000 threads.
+Afin d'obtenir une mesure précise, on effectue 10 mesures de chaques, puis on fait la moyenne.
+Toutes les mesures sont faites en ms.
+
+Pour 1 thread : 200, 201, 183, 183, 190, 175, 187, 219, 188, 177 : moyenne ~ 190.3 ms
+Pour 10 threads : 193, 181, 172, 182, 176, 174, 173, 171, 174, 172 : moyenne ~ 176.8 ms
+Pour 100 threads : 547, 271, 239, 290, 214, 221, 229, 334, 232, 409 : moyenne ~ 292.6 ms
+Pour 1000 threads : 908, 726, 1267, 841, 794, 794, 583, 1339, 591, 696 : moyenne ~ 853.9 ms
+
+On se rend compte que le meilleur temps est celui où il y a 10 consommateurs.
+Nous allons essayer d'affiner les mesures autour de ces temps d'éxécution les plus efficaces, à savoir entre 1 et 10 threads.
+Pour 2 threads : 190, 193, 171, 175, 168, 181, 192, 178, 187, 186 : moyenne ~ 182.1 ms
+Pour 3 threads : 172, 170, 166, 167, 186, 172, 174, 174, 173, 167 : moyenne ~ 172.1 ms
+pour 4 threads : 166, 165, 165, 170, 171, 166, 170, 165, 174, 164 : moyenne ~ 176.6 ms
+pour 5 threads : 166, 163, 179, 161, 157, 164, 163, 160, 165, 160 : moyenne ~ 163.8 ms
+pour 6 threads : 170, 187, 167, 170, 172, 161, 163, 170, 171, 174 : moyenne ~ 170.5 ms
+pour 7 threads : 165, 165, 179, 169, 181, 170, 167, 170, 164, 173 : moyenne ~ 170.3 ms
+Nous estimons donc que le meilleur temps d'éxécution, pour des conditions similaires à celles des relevés ci-dessus, sera le traitement du texte réalisé par 5 threads.
+
+Comme le traitement se fait très rapidement et que nous somme dans le cas d'une base de données moyenne (le texte est loin d'être aussi grands que certaines bases traitées en flot de données), si il y a trop de thread le temps d'execution sera allongé.
+En effet le temps de création des threads est pénalisant pour le programme, en revanche si il n'y en a pas assez cela sera comme si nous n'avions pas de threads, donc pas de traitement parallèle.
+
+question 4)
+En prenant le temps d'éxécution de la même façon que dans la question 3, on trouve que l'implémentation du TP1 de traitement de texte est beaucoups plus lente (aux alentours de 6666 ms).
+Cela s'explique par le fait que le traitement du TP 1 est fait mot par mot. la tâche est répétée autant de fois qu'il y a de mots, sans parallélisme.
+L'implémentation avec les streams s'avère plus performante (aux alentours de 190 ms).
+On remarque alors que, dans notre cas, une implémentation avec stream se montrera plus performante qu'une implémentation avec threads contenant 1000 threads.
+
+Le choix de l'implémentation de traitement reposera donc essentiellement sur la densité des données à traiter, afin de pouvoir optimiser au maximum, à la fois la vitesse de traitement, et la consommation mémoire (en particulier pour la création de threads)
+

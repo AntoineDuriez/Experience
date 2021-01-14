@@ -1,0 +1,59 @@
+/*1 LA Contamination*/
+WITH sympt AS(
+      SELECT * from ressent WHERE nompatient='Adrien'
+), possMaladies AS(
+      SELECT * FROM (sympt natural join estAssocieA)
+), diag AS(
+      SELECT nomMaladie,nomPatient FROM possMaladies GROUP BY nomMaladie,nomPatient ORDER BY COUNT(nomMaladie) DESC LIMIT 1
+)
+SELECT * FROM diag;
+
+/*2 Consultation*/
+SELECT * FROM ressent WHERE nomPatient='Adrien';
+
+/*3 Prescription*/
+WITH sympt AS(
+      SELECT * from ressent WHERE nompatient='Adrien'
+), possMaladies AS(
+      SELECT * FROM (sympt natural join estAssocieA)
+), diag AS(
+      SELECT nomMaladie,nomPatient FROM possMaladies GROUP BY nomMaladie,nomPatient ORDER BY COUNT(nomMaladie) DESC LIMIT 1
+), traite AS(
+      SELECT nomPatient,nomMaladie,nomtraitement FROM diag natural join soigne
+)
+SELECT * FROM traite;
+
+/*4 La Prévention*/
+WITH traitgrippe AS(
+     SELECT DISTINCT nomTraitement from diagnostic natural join soigne WHERE nomMaladie = 'Grippe'
+     ),troisan AS(
+     SELECT nomPatient FROM diagnostic natural join traitgrippe WHERE datation >= '01-01-2017'
+     ), prev AS(
+     SELECT nom FROM patient join troisan on troisan.nomPatient = patient.nom WHERE age>=60
+     )
+SELECT * FROM prev;
+
+/*5 L'éthique (1)*/
+WITH diag AS(
+     SELECT nomMedecin,nomTraitement FROM diagnostic 
+),prescri AS(
+     SELECT nomMedecin,nomMedicament FROM diag natural join prescription
+)
+SELECT * FROM  estDeveloppePar natural join prescri;
+
+/*6 L'étique (2)*/
+WITH diag AS(
+     SELECT nomMedecin,nomTraitement FROM diagnostic 
+),prescri AS(
+     SELECT nomMedecin,nomMedicament FROM diag natural join prescription
+)
+SELECT * FROM prescri natural join estFabriquePar;
+
+/*8*/
+WITH t1 AS(
+     SELECT *
+     FROM diagnostic
+), t2 AS(
+     SELECT *
+     FROM diagnostic
+)

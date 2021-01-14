@@ -1,0 +1,48 @@
+TP2
+Exo1
+1) nom du paquet de l'appli : rdvmanager
+Le nom du paquet correspond au nom de la "classe principale" : en entrant dans le paquet, le programme
+compile RdvManager.
+
+3) immuable : comme String, une fois déclarer, il n'est plus modifiable
+immuable car pas de setteur pour changer l'état de l'objet.
+S'il y avait un des setteurs, les objets auraient pus être modifié.
+
+4) 2 nouvelles classes Rdv héritées de Rdv : RdvLieu et RdvPeriodicite
+
+5) Il va être nécessaire de redéfinir la méthode equals, car la méthode teste les références des 2 arguments.
+Dans notre cas, nous allons avoir besoin de tester l'entièreté des champs du rdv pour savoir s'il est identique à un autre.
+
+6) La description fonctionnelle pour l'affichage mentionne : 
+-L'utilisateur entre une date (au format YYYY-MM-JJ)
+-L'utilisateur entre une heure (une temps au format HH:MM)
+-les rendez-vous ayant lieu aprèrs l'heure indiquée sont affichés et l'utilisateur est redirigé vers le menu principal.
+
+//test du programme : voir document de test
+Après les tests effectués, on observe que le programme répond aux exigences de la spécification.
+Lorsque l'on teste avec un paramètre null, on obtient cependant une erreur : 
+On effectue le remplacement suivant dans la méthode printFrom :
+for (Rdv r : this.list) {
+            if (r.getStart().isAfter(null)) { //auparavent d, devient null
+                output.println(r);
+                isEmpty = false;
+            }
+        }
+En ajoutant un rendezvous et en essayant de l'afficher (voir document de test), on obient l'erreur suivante :
+Exception in thread "main" java.lang.NullPointerException
+La méthode n'est donc pas protégée des exceptions suscitées par des pointeurs nuls.
+De plus, la récupération du LocalDateTime est mal protégée : 
+p
+# Print the list of rendezvous
+# Enter date (YYYY-MM-DD)
+> 2000-vfe-vf
+Exception in thread "main" java.lang.NumberFormatException: For input string: "vfe"
+Nous rajouterons donc un catch NumberFormatException dans la méthode readDate() de la classe Rdvmanager en plus de
+l'écriture de printFromTo() dans la classe RdvList.
+
+--------------------------------------------------------------------------------------------
+Exo 2
+3)
+Selon la spécification donnée dans le TP : le quota doit être fixé au maximum entre le quotat existant et la longueur de la liste.
+
+4) Les préconditions de la méthode add seront les mêmes que celles de la méthodes setQuota, à savoir que le quota doit être supérieur à la longueur de la liste.

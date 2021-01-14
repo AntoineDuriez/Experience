@@ -1,0 +1,27 @@
+Compte rendu TP JAVA
+Marouby Alexandra 21703806
+
+**********************************************
+Exercice 2, TP10
+
+questions 1) et 2)
+Voir code
+
+question 3)
+On décide de calculer le temps d'éxecution mis par le programme pour remplir la ConcurrentHashMap de tous les mots du texte.
+On utilise le texte "Alice au pays des merveilles" (11-0.txt)
+On mesure pour 1, 10, 100 et 1000 threads.
+Afin d'obtenir une mesure précise, on effectue 10 mesures de chaques, puis on fait la moyenne.
+Toutes les mesures sont faites en ms.
+
+Pour 1 thread : 341, 324, 354, 304, 381, 305, 308, 307, 410, 388 : moyenne ~ 342.2 ms
+Pour 10 threads : 390, 333, 388, 299, 362, 457, 559, 379, 350, 348 : moyenne ~ 386.5 ms
+Pour 100 threads : 515, 388, 423, 346, 384, 365, 663, 571, 431, 406 : moyenne ~ 449.2 ms
+Pour 1000 threads : 744, 634, 616, 1074, 916, 794, 899, 951, 592, 496 : moyenne ~ 771.6 ms
+
+On se rend compte que le meilleur temps est celui où il n'y a qu'un consommateur.
+Nous allons essayer d'analyser les temps d'éxécution pour 2, 4 et 6 threads.
+Pour 2 threads : 336, 290, 387, 375, 334, 365, 371, 354, 392, 398 : moyenne ~ 360.2 ms
+Pour 4 threads : 523, 345, 352, 365, 315, 321,  337, 316, 370, 317 : moyenne ~ 356.1 ms
+Pour 6 threads : 409, 356, 340, 325, 320, 322, 393, 344, 368, 332 : moyenne ~ 350.9 ms
+ 

@@ -1,0 +1,78 @@
+@charset "ISO-8859-1";
+
+/*
+** NAVBAR
+*/
+.navbar { background-color: #FA9A6C; }	/*fond de la navbar*/
+.navbar .navbar-brand { color: #AD5E39; }	/*nom du site*/
+.navbar .navbar-nav .nav-link {	/*toutes les autres écritures sur la navbar*/
+	color: #AD5E39;
+	padding-left: 10px;	/*ajustement*/
+	padding-right: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+/*
+**	DROPLIST NAVBAR
+*/
+.navbar .navbar-nav .dropdown-menu {
+	background-color: #FA9A6C;	/*fond de la droplist*/
+}
+.navbar .navbar-nav .dropdown-menu .dropdown-item { color: #AD5E39; } /*couleur des items de la droplist*/
+.navbar .navbar-nav .dropdown-menu .dropdown-item:active {  /*fond lorsqu'on clique sur un item : transparent*/
+	color: #AD5E39;
+	background-color: #FA9A6C;
+}
+
+/*
+**LEAFLET MAP
+*/
+body {
+	padding: 0;
+	margin: 0;
+}
+html, body, #mapGenerator {
+	height: 96.5%;
+	width: 99.5vw;
+	z-index: 1;
+}
+
+#GPSMap {
+	height: 100%;
+	width: 100vw;
+}
+/*
+**	AUTHENTICATION PAGE
+ */
+#auth-titre{
+	text-align: center;
+	margin: 5%;
+}
+.form-group{
+	margin-right: 20%;
+	margin-left: 20%;
+}
+#submit{
+	margin-left: 20%;
+}
+
+/*
+** MARKER
+**
+ */
+
+.marker_btn {
+	background-color: #FA9A6C;
+	color: #AD5E39;
+	/*font-weight: bold;*/
+}
+
+.changer_btn {
+	color: #28ADA0;
+}
+
+.marker_btn_caroussel {
+	background-color: green;
+	color: white;
+}
+

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee5f23c6-998a-4a55-8f8c-bace10300a90" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="jetty-auth-DAOv1" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZLgtkJLfQD6BQ2ejUy0devrrA1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alexa\OneDrive\Bureau\EIDD 2\S2\GLA\test\jetty-clement\src\main\webapp" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee5f23c6-998a-4a55-8f8c-bace10300a90" name="Default Changelist" comment="" />
+      <created>1584624005102</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584624005102</updated>
+      <workItem from="1584624009974" duration="8000" />
+      <workItem from="1584625076240" duration="140000" />
+      <workItem from="1584629831859" duration="5884000" />
+      <workItem from="1584700730035" duration="8131000" />
+      <workItem from="1585124683189" duration="15413000" />
+      <workItem from="1585213460129" duration="12980000" />
+      <workItem from="1585324856428" duration="1601000" />
+      <workItem from="1585740646847" duration="1881000" />
+      <workItem from="1585742628940" duration="1596000" />
+      <workItem from="1585834613854" duration="5709000" />
+      <workItem from="1585911505026" duration="3747000" />
+      <workItem from="1586004059999" duration="10234000" />
+      <workItem from="1586341666139" duration="1247000" />
+      <workItem from="1586415333701" duration="2318000" />
+      <workItem from="1586433121028" duration="3972000" />
+      <workItem from="1586689903197" duration="544000" />
+      <workItem from="1586766226421" duration="8482000" />
+      <workItem from="1586787807281" duration="4279000" />
+      <workItem from="1586934823254" duration="17783000" />
+      <workItem from="1587025335451" duration="19817000" />
+      <workItem from="1587129964458" duration="6476000" />
+      <workItem from="1587162584499" duration="887000" />
+      <workItem from="1587376093825" duration="15791000" />
+      <workItem from="1587469068808" duration="1480000" />
+      <workItem from="1587539022329" duration="10694000" />
+      <workItem from="1587559425026" duration="13294000" />
+      <workItem from="1587627107149" duration="6810000" />
+      <workItem from="1587649220496" duration="1224000" />
+      <workItem from="1587650544501" duration="2084000" />
+      <workItem from="1587800249526" duration="24635000" />
+      <workItem from="1587897193685" duration="12483000" />
+      <workItem from="1588061125809" duration="16171000" />
+      <workItem from="1588143568795" duration="11026000" />
+      <workItem from="1588231553784" duration="22143000" />
+      <workItem from="1588406252086" duration="14273000" />
+      <workItem from="1588493388844" duration="23055000" />
+      <workItem from="1588576205743" duration="4055000" />
+      <workItem from="1588580844309" duration="10773000" />
+      <workItem from="1588611965113" duration="3316000" />
+      <workItem from="1588665042628" duration="9461000" />
+      <workItem from="1588681664918" duration="7026000" />
+      <workItem from="1588715920083" duration="8362000" />
+      <workItem from="1589014669995" duration="3473000" />
+      <workItem from="1589028531957" duration="2609000" />
+      <workItem from="1589197466544" duration="3842000" />
+      <workItem from="1589298872032" duration="1400000" />
+      <workItem from="1589317999435" duration="1161000" />
+      <workItem from="1589352711653" duration="598000" />
+      <workItem from="1589353762316" duration="144000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="75" key="#Inspections" timestamp="1587389994310">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="75" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1587389994310" />
+    <state x="361" y="75" key="#Project_Structure" timestamp="1586953364001">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="75" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1586953364001" />
+    <state x="449" y="152" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588580518213">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="152" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1588580518213" />
+    <state x="359" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1587907669686">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="359" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1587907669686" />
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589281074968">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589281074968" />
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1588579761410">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588579761410" />
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1589353762644">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589353762644" />
+    <state x="473" y="46" width="590" height="732" key="find.popup" timestamp="1585137565734">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="473" y="46" width="590" height="732" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1585137565734" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1587899946982">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587899946982" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588232600853">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588232600853" />
+  </component>
+</project>

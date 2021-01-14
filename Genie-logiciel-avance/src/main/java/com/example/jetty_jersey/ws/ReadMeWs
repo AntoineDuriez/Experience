@@ -1,0 +1,5 @@
+Deuxième version des bouchons cette fois vraiment sous forme de webservices
+Ils étaient appelés dans les classes de com.example.jetty_jersey.ws.impl
+Ils comportent des erreurs car nous avons apporter des modifications à la version finale afin de pouvoir mieux
+communiquer avec la bdd
+Ils ne sont plus utilisés, nous les avons laissé pour la même raison que ceux de com.example.datanucleus.dao.stub

@@ -1,7 +1,7 @@
 /*
  * Le jeu de Tetris
  * 
- * @author: GANTET Saturnin & GREGOIRE Clement
+ * @author: GANTET Saturnin & DURIEZ Antoine
  */
 /*
  * On doit toujours utiliser cette directive de compilation pour utiliser les

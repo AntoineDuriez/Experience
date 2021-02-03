@@ -1,0 +1,49 @@
+set remotetimeout 10000
+
+set logging file gdb_result_004.txt
+set logging overwrite on
+set logging on
+set height 0
+set print pretty on
+set print array on
+
+tar extended-remote localhost:1234
+
+load
+mon perf reset
+
+break f_affichage
+commands
+
+	silent
+	printf "\n**** f_affichage() ****\n"
+cont
+end
+
+break timer_1_entry
+commands
+
+	silent
+	printf "\n**** timer_1_entry() ****\n"
+cont
+end
+
+break send_flux
+commands
+silent
+	printf "%d \t %d \t %d ", time, f.id_first_acquisition, f.id_window
+	printf "\t %f ", f.measures[0]
+	printf "\t %f ", f.measures[1]
+	printf "\t %f ", f.measures[2]
+	printf "\t %f ", f.measures[3]
+	printf "\t %f ", f.measures[4]
+	printf "\t %f ", f.measures[5]
+	printf "\t %f ", f.measures[6]
+	printf "\t %f ", f.measures[7]
+	printf "\t %f ", f.measures[8]
+	printf "\t %f\n", f.measures[9]
+cont
+end
+
+start
+cont 
